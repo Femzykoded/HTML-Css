@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>My new project file</title>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
     <body> 
         <div class="container">
             <div class="nav-wrapper">
                 <div class="left-side">
-                    <div class="nav-link-wrapper">
+                    <div class="nav-link-wrapper active-nav-link">
                         <a href="index.html">Home</a>
                     </div>
 
@@ -201,6 +202,16 @@
         </div>
     </body>
     <script>
-        
+        const portfolioitems = document.querySelectorAll('.project-items-wrapper')
+
+        projectitems.array.forEach(projectitem => {
+            projectitem.addEventListener('mouseover', ()=> {
+                projectitem.childNodes[1].classList.add('img-darken')
+            })
+
+            projectitem.addEventListener('mouseout', ()=> {
+                projectitem.childNodes[1].classList.remove('img-darken')
+            })
+        });
     </script>
 </html>
